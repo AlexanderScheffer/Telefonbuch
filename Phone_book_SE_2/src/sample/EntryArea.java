@@ -1,6 +1,6 @@
-package ui;
+package sample;
 
-import data.TelefonEntry;
+import sample.TelefonEntry;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;

@@ -14,26 +14,33 @@ public class Main {
 
 
    boolean status = playboard.win_check();
-        //boolean win=false;
+
 
         while (status!= true) {
 
         // Player X plays
-            Player player_X = new Player();
+
+            Input player_X = new Input();
             int row_X = player_X.get_input_X();
+
             playboard.set_row(1, row_X);
             status=playboard.win_check();
-            //System.out.println(status);
+            //System.out.println("Player X " + status);
 
+            if (status == true){
+                break;
+            }
+            else {
 
         // Player O plays
-            Player player_O = new Player();
-            int row_O = player_O.get_input_O();
-            playboard.set_row(2, row_O);
-            status=playboard.win_check();
-            //System.out.println(status);
+                Input player_O = new Input();
+                int row_O = player_O.get_input_O();
 
+                playboard.set_row(2, row_O);
+                status = playboard.win_check();
+                //System.out.println("Player O " + status);
 
+            }
         }
     }
 }

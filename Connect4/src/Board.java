@@ -1,6 +1,6 @@
 public class Board {
 
-    int max = 8;
+
 
     // setting up initial board
     char[][] playboard = {
@@ -13,7 +13,7 @@ public class Board {
                             {'.','.','.','.','.','.','.','.'},
                             {'.','.','.','.','.','.','.','.'}};
 
-    void show(){
+    public void show(){
 
      System.out.println("1 2 3 4 5 6 7 8");
 
@@ -30,7 +30,7 @@ public class Board {
      }
 
      // Get the right user and a sign from him to modify the board
-    void set_row(int player, int in_row){
+    public void set_row(int player, int in_row){
         char sign;
         int max=7;
         int row =in_row-1;
@@ -112,13 +112,14 @@ public class Board {
 
             for (int j =0; j < playboard[i].length; j++)
             {
-                if ((( playboard[i][j] =='X') &&
+                if ((( (playboard[i] == playboard[j] &&(playboard[i][j] == 'X')) /*&&
                         (playboard[i+1][j+1] =='X') &&
                         (playboard[i+2][j+2] == 'X') &&
                         (playboard[i+3][j+3] == 'X' )) ||
                           ((playboard[max][j] =='X') &&
                            (playboard[max-1][j+1] == 'X')       )){
 
+                    counter+=1;
                     flag= true;
                     System.out.println("X wins");
                 }

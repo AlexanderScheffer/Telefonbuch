@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Player {
+public class Input {
  int player=0;
     public int get_input_X() {
         player = 1;
@@ -8,9 +8,8 @@ public class Player {
         Scanner Input_X = new Scanner(System.in);
         int X = Integer.parseInt(Input_X.nextLine());
 
-
-        if (X != 0 || X != 1 || X != 2 || X != 3 || X != 4 || X != 5 || X != 6 || X != 7 || X != 8) {
-            System.out.println("Wrong X-input Value. Make a correct input!");
+            if ((X<1) || (X>8)){
+               System.out.println("Wrong X-input Value. Make a correct input!");
         }
 
         return X;
@@ -23,8 +22,8 @@ public class Player {
         int O = Integer.parseInt(Input_O.nextLine());
 
 
-        //if (O != 0 || O != 1 || O != 2 || O != 3 || O != 4 || O != 5 || O != 6 || O != 7 || O != 8){
-        if ((O<1)&& (O>8)){
+
+        if ((O<1) || (O>8)){
             System.out.println("Wrong O-input Value. Make a correct input!");
         }
 
